@@ -7,7 +7,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
         <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    
 </head>
 <body>
     <div class="flex bg-gradient-to-r justify-center text-center tesla">
@@ -26,7 +25,7 @@
         </div>
     </div>
 
-    <div class="absolute w-[100%] h-screen bg-cover bg-center" style="background-image: url({{ asset('storage/mainpagecontent/Homepage-Model-Y-Global-Desktop.jpeg') }});"></div>
+    <div class="absolute w-[100%] h-screen bg-cover bg-center" style="background-image: url({{ asset('storage/mainpagecontent/Homepage-Model-Y-2-Desktop-EMEA-LHD.jpeg') }});"></div>
 
     <div class="grid grid-rows-5">
         <header>
@@ -62,6 +61,9 @@
         <div class="w-[100%] h-[40px]">
         </div>
         <div class="relative w-[100%] h-[50px]"></div>
+    </div>
+    <div id="app">
+        <agb-component></agb-component> 
     </div>
 
 </body>

@@ -8,3 +8,6 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('EdisonHompage');
 });
+Route::get('/agb', function () {
+    return view('agb');
+});
