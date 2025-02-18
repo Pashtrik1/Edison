@@ -9,22 +9,9 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
 </head>
 <body>
-    <div class="flex bg-gradient-to-r justify-center text-center tesla">
-        <div class="flex pb-3 pt-2 text-white text-lg">
-            <p class="mx-6 font-xl">
-                <span class="font-bold px-[8px]">
-                    Updates erhalten
-                </span>
-                <span class="text-[0.95rem] font-medium">
-                    Seien Sie unter den Ersten, die erfahren, wann unser aktualisiertes Model 3 für Probefahrten verfügbar ist.
-                </span>
-                <span class="inline-block underline ms-2 text-[0.955rem] cursor-pointer">
-                    Melden Sie sich an!!
-                </span>
-            </p>
-        </div>
-    </div>
-
+    <div id="App">
+        <personal></personal>
+    </div> <!-- Vue will mount here -->
     <div class="absolute w-[100%] h-screen bg-cover bg-center" style="background-image: url({{ asset('storage/mainpagecontent/Homepage-Model-Y-2-Desktop-EMEA-LHD.jpeg') }});"></div>
 
     <div class="grid grid-rows-5">
