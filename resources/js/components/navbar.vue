@@ -3,7 +3,7 @@
         <header>
             <div class="flex flex-row flex-wrap justify-between relative h-[56px]">
                 <button class="px-4">
-                    <img src="../../../storage/app/public/mainpagecontent/TESLA.svg" alt="TESLA" class="w-[120px]">
+                    <img src="../../../public/storage//mainpagecontent/icons/TESLA.svg" alt="TESLA" class="w-[120px]">
                 </button>
                 <ol class="lg:flex hidden flex-row justify-around items-center font-medium">
                     <li class="duration-300 hover:bg-[#0000000D] px-[8px] py-[4px] rounded-lg"><button class="mx-[8px]"><span>Fahrzeuge</span></button></li>
@@ -18,9 +18,9 @@
                         </button> 
                 </div>
                     <ol class="hidden lg:flex flex-row justify-center items-center me-7">
-                        <li class="flex duration-300 py-[4px] px-[8px] hover:bg-[#0000000D] rounded-lg"><button class=""><img src="../../../storage/app/public/mainpagecontent/mark.png" alt=""></button></li>
-                        <li class="flex duration-300 py-[4px] px-[8px] hover:bg-[#0000000D] rounded-lg"><button class=""><img src="../../../storage/app/public/mainpagecontent/Glob.png" alt=""></button></li>
-                        <li class="flex duration-300 py-[4px] px-[8px] hover:bg-[#0000000D] rounded-lg"><button class=""><img src="../../../storage/app/public/mainpagecontent/User.png" alt=""></button></li>
+                        <li class="flex duration-300 py-[4px] px-[8px] hover:bg-[#0000000D] rounded-lg"><button class=""><img src="../../../public/storage/mainpagecontent/icons/mark.png" alt=""></button></li>
+                        <li class="flex duration-300 py-[4px] px-[8px] hover:bg-[#0000000D] rounded-lg"><button class=""><img src="../../../public/storage/mainpagecontent/icons/Glob.png" alt=""></button></li>
+                        <li class="flex duration-300 py-[4px] px-[8px] hover:bg-[#0000000D] rounded-lg"><button class=""><img src="../../../public/storage/mainpagecontent/icons/User.png" alt=""></button></li>
                     </ol>
             </div>
         </header>
