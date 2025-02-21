@@ -10,7 +10,6 @@
 </head>
 <body>
     <div id="App">
-        <personal></personal>
         <home>
         </home>
         <cbanner></cbanner>

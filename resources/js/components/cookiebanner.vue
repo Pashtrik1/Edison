@@ -1,7 +1,7 @@
 <template>
     <div 
         v-if="showBanner"
-        class="cookie-banner tds-scrim--white a relative z-1" 
+        class="cookie-banner tds-scrim--white z-10 relative" 
         id="cookie_banner" 
         style="width: 100%; height: auto; z-index: 100002; position: fixed; bottom: 0px; display: flex; align-items: center; background: rgb(255, 255, 255); padding: 16px 48px; box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 16px 0px; flex-flow: row;">
         <div style="flex: 1 1 0%; font-size: 12px; margin-right: 24px;">
