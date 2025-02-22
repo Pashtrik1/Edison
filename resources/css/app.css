@@ -8,3 +8,20 @@
 *{
     font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.personalMsg{
+background: linear-gradient(90deg, #e4c678 0, #f2e5c2 50%, #e8d199 100%) !important;
+}
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+      
+    ::-webkit-scrollbar-track {
+    background: transparent;
+    }
+          
+    ::-webkit-scrollbar-thumb {
+        background-color: #e8d199;
+        border-radius: 0px; 
+    }

@@ -15,16 +15,18 @@
 
         <!-- Text über dem Bild -->
         <div class="w-[100%] h-[100%] absolute bottom-0 inset-0 flex justify-center my-9">
-            <div class="inset-0 justify-center h-screen relative flex mt-[125px]">
+            <div class="inset-0 justify-center h-screen relative flex mt-[132px]">
                 <div class="text-center tracking-tighter">
                     <h1 class="text-white text-[69px] font-semibold leading-none pb-1">Das neue Model Y</h1>
                     <h3 class="text-white font-semibold text-2xl">Auslieferungen beginnen im März</h3>
-                    <div class="w-[100%] bg-white flex justify-center align-centerp-3">
-                        <div class="flex justify-center">
-                            <button class="bg-black text-white text-lg font-semibold py-3 px-6 rounded-lg mt-6">Mehr erfahren</button>
-                        </div>
-                        <div class="flex justify-center">
-                            <button class="bg-black text-white text-lg font-semibold py-3 px-6 rounded-lg mt-6">Mehr erfahren</button>
+                    <div class="flex justify-center mt-4">
+                        <div class="flex gap-4 space-x-3">
+                            <button type="button" class="w-[255px] h-10 text-white bg-blue-600 hover:bg-blue-800 font-semibold rounded text-sm px-6 py-[3px] dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none">
+                                Bestellen
+                            </button>
+                            <button type="button" class="w-[255px] h-10 text-black bg-white hover:bg-white-800 font-semibold rounded text-sm px-6 py-[3px] dark:bg-white-600 dark:hover:bg-gray-200 focus:outline-none">
+                                Weitere Informationen
+                            </button>
                         </div>
                     </div>
                 </div>

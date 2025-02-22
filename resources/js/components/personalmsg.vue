@@ -1,10 +1,9 @@
 <template>
-  <div ref="rootElement" class="fixed flex bg-gradient-to-r from-gray-900 to-gray-700 justify-center text-center text-white w-[100%] z-30">
-      <div class="flex pb-3 pt-2 text-lg">
+  <div ref="rootElement" class="fixed flex personalMsg justify-center text-center text-black w-[100%] z-50">
+      <div class="flex pb-2 pt-2 text-lg">
           <p class="mx-6 text-xl">
-              <span class="font-bold px-2">Updates erhalten</span>
               <span class="text-[0.95rem] font-medium">{{ message }}</span>
-              <span class="inline-block underline ms-2 text-[0.955rem] cursor-pointer">Melden Sie sich an</span>
+              <a href="" class="text-[0.67rem] mx-2 bg-black text-white rounded py-[7px] px-4 ">Beststnd erkunden</a>
           </p>
       </div>
   </div>
@@ -19,7 +18,7 @@ export default {
   data(){
         return {
             divHeight: 0,
-            message: "Seien Sie unter den Ersten, die erfahren, wann unser aktualisiertes Model 3 für Probefahrten verfügbar ist.",
+            message: "Model Y aus begrenztem Bestand verfügbar Ab 0,00% Zinssatz",
         };
     },
     mounted() {

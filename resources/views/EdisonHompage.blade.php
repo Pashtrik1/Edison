@@ -8,7 +8,7 @@
         <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
 </head>
-<body>
+<body class="h-screen overflow-auto">
     <div id="App">
         <home>
         </home>
