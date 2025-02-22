@@ -14,26 +14,6 @@
         </home>
         <cbanner></cbanner>
     </div>
-    <div>
-        <section>
-            <div class="w-[100%] h-screen bg-cover bg-center" style="background-image: url({{ asset('storage/mainpagecontent/model-Y/Homepage-Model-Y-Global-Desktop.jpeg') }});"></div>
-        </section>
-    </div>
-    <div>
-        <section>
-            <div class="w-[100%] h-screen bg-cover bg-center" style="background-image: url({{ asset('storage/mainpagecontent/model-3/Homepage-Model-3-Desktop-US.jpeg') }});"></div>
-        </section>
-    </div>
-    <div>
-        <section>
-            <div class="w-[100%] h-screen bg-cover bg-center" style="background-image: url({{ asset('storage/mainpagecontent/model-S/Homepage-Model-S-Desktop-US.jpeg') }});"></div>
-        </section>
-    </div>
-    <div>
-        <section>
-            <div class="w-[100%] h-screen bg-cover bg-center" style="background-image: url({{ asset('storage/mainpagecontent/model-X/Homepage-Model-X-Desktop-US.jpeg') }});"></div>
-        </section>
-    </div>
     <div id="app">
         <agb-component></agb-component> 
     </div>

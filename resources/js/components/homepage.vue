@@ -12,7 +12,6 @@
                 </picture>
             </div>
         </section>
-
         <!-- Text über dem Bild -->
         <div class="w-[100%] h-[100%] absolute bottom-0 inset-0 flex justify-center my-9">
             <div class="inset-0 justify-center h-screen relative flex mt-[132px]">
@@ -28,6 +27,25 @@
                                 Weitere Informationen
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative z-0 max-h-[855px] overflow-hidden">
+        <section class="relative z-0">
+            <div class="w-[100%] h-[855px] overflow-hidden ">
+                <picture>
+                    <source type="image/webp" v-for="(image, index) in models[1].img" :key="index" :srcset="assingi(models[1].img[index].source)" :media="models[1].img[index].media">
+                    <img src="../../../public/storage/mainpagecontent/model-3/Homepage-Model-3-Desktop-US.jpeg" alt="Model 3" class="w-full h-auto max-h-[855px] object-cover object-[70%_30%]" >
+                </picture>
+            </div>
+        </section>
+        <div class="w-[100%] h-[100%] absolute bottom-0 inset-0 flex justify-center my-9">
+            <div class="inset-0 justify-center h-screen relative flex mt-[95px]">
+                <div class="text-center tracking-tighter">
+                    <h1 class="text-white text-[55px] font-semibold leading-none pb-1">{{ models[0].model }}</h1>
+                    <div class="flex justify-center mt-4">
                     </div>
                 </div>
             </div>
@@ -87,6 +105,15 @@ export default {
                         { source: "model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.avif", media: "(min-width: 900px) and (orientation: portrait)" }
                     ]
                 },
+                {
+                    model: "Model 3",
+                    img: [
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                    ]
+                }
                 // Weitere Modelle...
             ],
             message: "Seien Sie unter den Ersten, die erfahren, wann unser aktualisiertes Model 3 für Probefahrten verfügbar ist.",

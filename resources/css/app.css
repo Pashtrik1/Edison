@@ -14,7 +14,7 @@ background: linear-gradient(90deg, #e4c678 0, #f2e5c2 50%, #e8d199 100%) !import
 }
     /* Custom scrollbar */
     ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
     }
       
     ::-webkit-scrollbar-track {
@@ -22,6 +22,5 @@ background: linear-gradient(90deg, #e4c678 0, #f2e5c2 50%, #e8d199 100%) !import
     }
           
     ::-webkit-scrollbar-thumb {
-        background-color: #e8d199;
-        border-radius: 0px; 
+        background-color: #b8b8b8;
     }
