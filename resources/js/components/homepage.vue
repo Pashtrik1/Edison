@@ -32,35 +32,21 @@
             </div>
         </div>
     </div>
-    <div class="relative z-0 max-h-[855px] overflow-hidden">
-        <section class="relative z-0">
-            <div class="w-[100%] h-[855px] overflow-hidden ">
-                <picture>
-                    <source type="image/webp" v-for="(image, index) in models[1].img" :key="index" :srcset="assingi(models[1].img[index].source)" :media="models[1].img[index].media">
-                    <img src="../../../public/storage/mainpagecontent/model-3/Homepage-Model-3-Desktop-US.jpeg" alt="Model 3" class="w-full h-auto max-h-[855px] object-cover object-[70%_30%]" >
-                </picture>
-            </div>
-        </section>
-        <div class="w-[100%] h-[100%] absolute bottom-0 inset-0 flex justify-center my-9">
-            <div class="inset-0 justify-center h-screen relative flex mt-[95px]">
-                <div class="text-center tracking-tighter">
-                    <h1 class="text-white text-[55px] font-semibold leading-none pb-1">{{ models[0].model }}</h1>
-                    <div class="flex justify-center mt-4">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <modelH :="model[1]"></modelH>
+    <modelH :="model[2]"></modelH>
+    <modelH :="model[3]"></modelH>
 </template>
 <script>
 import { nextTick, onMounted, ref } from 'vue';
 import enavbar from './navbar.vue';
 import personalmsg from './personalmsg.vue';
+import modelH from './hopageModel.vue';
 
 export default {
     components: {
         enavbar,
-        personalmsg
+        personalmsg,
+        modelH
     },
     setup() {
         const bannerRef = ref(null);
@@ -103,7 +89,18 @@ export default {
                         { source: "model-Y-2/Homepage-Model-Y-2-Mobile-EMEA-LHD.avif", media: "(max-width: 599px) and (orientation: portrait)" },
                         { source: "model-Y-2/Homepage-Model-Y-2-Tablet-EMEA-LHD.avif", media: "(min-width: 600px) and (orientation: portrait)" },
                         { source: "model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.avif", media: "(min-width: 900px) and (orientation: portrait)" }
-                    ]
+                    ],
+                    message: "Seien Sie unter den Ersten, die erfahren, wann unser aktualisiertes Model 3 für Probefahrten verfügbar ist.",
+                },
+                {
+                    model: "Model Y",
+                    img: [
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                    ],
+                    message: ""
                 },
                 {
                     model: "Model 3",
@@ -112,11 +109,63 @@ export default {
                         { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
                         { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
                         { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
-                    ]
+                    ],
+                    message: "Verfügbar ab 439 € pro Monat2",
+                },
+                {
+                    model: "Model S",
+                    img: [
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                    ],
+                    message:"Erhältlich mit unbegrenzter, kostenloser Supercharger-Nutzung und Premium-Konnektivität3"
+                },
+                {
+                    model: "Model X",
+                    img: [
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                    ],
+                    message:"Erhältlich mit unbegrenzter, kostenloser Supercharger-Nutzung und Premium-Konnektivität3"
+                },
+                {
+                    model: "Tesla erleben",
+                    img: [
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                    ],
+                    message:""
+                },
+                {
+                    model: "Powerwall",
+                    img: [
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                    ],
+                    message:""
+                },
+                {
+                    model: "Zubehör",
+                    img: [
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                    ],
+                    message:"",
+                    ButtonA: "Shop",
+                    ButtonB: "Mehr erfahren"
                 }
                 // Weitere Modelle...
             ],
-            message: "Seien Sie unter den Ersten, die erfahren, wann unser aktualisiertes Model 3 für Probefahrten verfügbar ist.",
         };
     },
     methods: {
