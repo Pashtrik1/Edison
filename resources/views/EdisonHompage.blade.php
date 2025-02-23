@@ -18,11 +18,6 @@
         <agb-component></agb-component> 
     </div>
     <footer>
-        <div>
-            <div class="">
-                <p>text mitte</p>
-            </div>
-        </div>
     </footer>
 </body>
 </html>
