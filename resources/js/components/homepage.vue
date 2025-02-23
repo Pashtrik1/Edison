@@ -96,9 +96,9 @@ export default {
                 {
                     model: "Model Y",
                     img: [
-                        { source: "model-Y/Homepage-Model-Y-Global-Desktop.jpeg", media: "(min-width: 900px) and (orientation: landscape)" },
-                        { source: "model-Y/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
-                        { source: "model-Y/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "model-Y/Homepage-Model-Y-Global-Desktop.jpeg", media: "(min-width: 600px)" },
+                        { source: "model-Y/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px)" },
+                        { source: "model-Y/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(min-width: 600px) and (orientation:portrait)" },
                         { source: "model-Y/Homepage-Model-Y-Global-Desktop.jpeg", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
                     message: ""
