@@ -21,10 +21,10 @@
                     <div class="flex justify-center mt-4">
                         <div class="flex gap-4 space-x-3">
                             <button type="button" class="w-[255px] h-10 text-white bg-blue-600 hover:bg-blue-800 font-semibold rounded text-sm px-6 py-[3px] dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none">
-                                Bestellen
+                                {{ models[0].buttonA }}
                             </button>
                             <button type="button" class="w-[255px] h-10 text-black bg-white hover:bg-white-800 font-semibold rounded text-sm px-6 py-[3px] dark:bg-white-600 dark:hover:bg-gray-200 focus:outline-none">
-                                Weitere Informationen
+                                {{ models[0].buttonB }}
                             </button>
                         </div>
                     </div>
@@ -36,6 +36,9 @@
     <modelH :modeli="models[2]"></modelH>
     <modelH :modeli="models[3]"></modelH>
     <modelH :modeli="models[4]"></modelH>
+    <modelH :modeli="models[5]"></modelH>
+    <modelH :modeli="models[6]"></modelH>
+    <modelH :modeli="models[7]"></modelH>
 </template>
 <script>
 import { nextTick, onMounted, ref } from 'vue';
@@ -92,6 +95,8 @@ export default {
                         { source: "model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.avif", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
                     message: "Seien Sie unter den Ersten, die erfahren, wann unser aktualisiertes Model 3 für Probefahrten verfügbar ist.",
+                    buttonA: "Bestellen",
+                    buttonB: "Weitere Informationen"
                 },
                 {
                     model: "Model Y",
@@ -101,7 +106,9 @@ export default {
                         { source: "model-Y/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(min-width: 600px) and (orientation:portrait)" },
                         { source: "model-Y/Homepage-Model-Y-Global-Desktop.jpeg", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
-                    message: ""
+                    message: "",
+                    buttonA: "Bestellen",
+                    buttonB: "Probefahrt"
                 },
                 {
                     model: "Model 3",
@@ -111,7 +118,9 @@ export default {
                         { source: "model-3/Homepage-Model-3-Mobile-US.avif", media: "(max-width: 599px) and (orientation: portrait)" },
                         { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
-                    message: "Verfügbar ab 439 € pro Monat2",
+                    message: "Verfügbar ab 439 € pro Monat²",
+                    buttonA: "Bestellen",
+                    buttonB: "Probefahrt"
                 },
                 {
                     model: "Model S",
@@ -121,7 +130,9 @@ export default {
                         { source: "model-S/Homepage-Model-S-Mobile-US.avif", media: "(max-width: 599px) and (orientation: portrait)" },
                         { source: "model-S/Homepage-Model-S-Desktop-US.avif", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
-                    message:"Erhältlich mit unbegrenzter, kostenloser Supercharger-Nutzung und Premium-Konnektivität3"
+                    message:"Erhältlich mit unbegrenzter, kostenloser Supercharger-Nutzung und Premium-Konnektivität³",
+                    buttonA: "Bestellen",
+                    buttonB: "Probefahrt"
                 },
                 {
                     model: "Model X",
@@ -131,39 +142,45 @@ export default {
                         { source: "model-X/Homepage-Model-X-Mobile-US.avif", media: "(max-width: 599px) and (orientation: portrait)" },
                         { source: "model-X/Homepage-Model-X-Desktop-US.avif", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
-                    message:"Erhältlich mit unbegrenzter, kostenloser Supercharger-Nutzung und Premium-Konnektivität3"
+                    message:"Erhältlich mit unbegrenzter, kostenloser Supercharger-Nutzung und Premium-Konnektivität³",
+                    buttonA: "Bestellen",
+                    buttonB: "Probefahrt"
                 },
                 {
                     model: "Tesla erleben",
                     img: [
-                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.avif", media: "(min-width: 900px) and (orientation: landscape)" },
-                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.avif", media: "(max-height: 599px) and (orientation: landscape)" },
-                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.avif", media: "(max-width: 599px) and (orientation: portrait)" },
-                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
-                    message:"!"
+                    message:"",
+                    buttonA: null,
+                    buttonB: "Probefahrt"
                 },
                 {
                     model: "Powerwall",
                     img: [
-                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: landscape)" },
-                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-height: 599px) and (orientation: landscape)" },
-                        { source: "model-3/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px) and (orientation: portrait)" },
-                        { source: "model-3/Homepage-Model-Y-Desktop-EMEA-LHD-v3.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                        { source: "powerwall/Homepage-Powerwall-3-Desktop-ROW.avif", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "powerwall/Homepage-Powerwall-3-Mobile-ROW.avif", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "powerwall/Homepage-Powerwall-3-Mobile-ROW.avif", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "powerwall/Homepage-Powerwall-3-Desktop-ROW.avif", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
-                    message:""
+                    message:" ",
+                    buttonA: "Angebot einholen",
+                    buttonB: "Weitere Informationen"
                 },
                 {
                     model: "Zubehör",
                     img: [
-                        { source: "additional/Homepage-Accessories-Desktop-EMEA-v2.avif", media: "(min-width: 900px) and (orientation: landscape)" },
-                        { source: "additional/Homepage-Accessories-Mobile-EMEA-v2.avif", media: "(max-height: 599px) and (orientation: landscape)" },
-                        { source: "additional/Homepage-Accessories-Mobile-EMEA-v2.avif", media: "(max-width: 599px) and (orientation: portrait)" },
-                        { source: "additional/Homepage-Accessories-Desktop-EMEA-v2.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                        { source: "additional/Homepage-Accessories-Desktop-EMEA-v2.jpg", media: "(min-width: 900px) and (orientation: landscape)" },
+                        { source: "additional/Homepage-Accessories-Mobile-EMEA-v2.jpg", media: "(max-height: 599px) and (orientation: landscape)" },
+                        { source: "additional/Homepage-Accessories-Mobile-EMEA-v2.jpg", media: "(max-width: 599px) and (orientation: portrait)" },
+                        { source: "additional/Homepage-Accessories-Desktop-EMEA-v2.jpg", media: "(min-width: 900px) and (orientation: portrait)" }
                     ],
                     message:"",
-                    ButtonA: "Shop",
-                    ButtonB: "Mehr erfahren"
+                    buttonA: null,
+                    buttonB: "Jetzt einkaufen"
                 }
                 // Weitere Modelle...
             ],

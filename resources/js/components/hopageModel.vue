@@ -1,19 +1,31 @@
 <template>
         <div class="relative z-0 overflow-hidden">
             <section class="relative z-0">
-                <div class="w-[100%] max-h-[855px] overflow-hidden">
+                <div class="w-[100%] max-h-[865px] overflow-hidden">
                     <picture>
                         <source v-for="(img, index) in modeli.img" :key="index" :srcset="assingi(img.source)" :media="img.media">
                         <img :src=assingi(modeli.img[0].source) alt="Model 3" class="w-full object-cover object-[55%_45%]" :style="{ height: computedHeight }">
                     </picture>
                 </div>
             </section>
-            <div class="w-[100%] h-[100%] absolute bottom-0 inset-0 flex justify-center my-9">
-                <div class="inset-0 justify-center h-screen relative flex mt-[95px]">
-                    <div class="text-center tracking-tighter">
-                        <h1 class="text-white text-[55px] font-semibold leading-none pb-1">{{ modeli.model }}</h1>
-                        <div class="flex justify-center mt-4">
-                            
+            <div class="w-[100%] h-[100%] absolute inset-0 flex justify-center border-white">
+                <div class="w-5/6 justify-center relative flex">
+                    <div class="grid grid-row-2 text-center tracking-tighter w-[100%]">
+                        <div class="grid grid-rows- items-center gap-y-1 h-[80px] sm:h-[100px] mt-[12%] sm:mt-[6%]">
+                            <h1 class="text-white text-5xl sm:text-6xl font-semibold leading-none">{{ modeli.model }}</h1>
+                            <h3 class="text-white font-semibold text-lg sm:text-2xl ">{{ modeli.message }}</h3>
+                        </div>
+                        <div class="flex justify-center items-end">
+                            <div class="flex space-x-3 pb-6 w-[100%] justify-center">
+                                <button class="w-[50%] max-w-[255px] min-w-[100px] h-10 text-white bg-blue-600 hover:bg-blue-800 font-semibold rounded text-sm px-6 focus:outline-none transition-all duration-200 ease-in-out"
+                                    v-if="modeli.buttonB != null">
+                                    {{ modeli.buttonB }}
+                                </button>
+                                <button class="w-[50%] max-w-[255px] min-w-[100px] h-10 text-black bg-white hover:bg-gray-200 font-semibold rounded text-sm px-6  focus:outline-none transition-all duration-200 ease-in-out"
+                                    v-if="modeli.buttonA != null">
+                                    {{ modeli.buttonA }}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
