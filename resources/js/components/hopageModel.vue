@@ -1,11 +1,15 @@
 <template>
         <div class="relative z-0 overflow-hidden">
             <section class="relative z-0">
-                <div class="w-[100%] max-h-[865px] overflow-hidden">
-                    <picture>
+                <div class="w-[100%] max-h-[855px] overflow-hidden">
+                    <picture v-if="modeli.mediaType == image">
                         <source v-for="(img, index) in modeli.img" :key="index" :srcset="assingi(img.source)" :media="img.media">
                         <img :src=assingi(modeli.img[0].source) alt="Model 3" class="w-full object-cover object-[55%_45%]" :style="{ height: computedHeight }">
                     </picture>
+                    <video v-if="modeli.mediaType == video" autoplay muted loop playsinline class="w-full object-cover object-center" :style="{ height: computedHeight }">
+                        <source v-for="(img, index) in modeli.img" :key="index" :srcset="assingi(img.source)" :src="assingi(img.source)" :type="img.type">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </section>
             <div class="w-[100%] h-[100%] absolute inset-0 flex justify-center border-white">
@@ -34,6 +38,12 @@
 </template>
 <script>
 export default {
+    data(){
+        return{
+            image: "image",
+            video: "video"
+        }
+    },
     props: {
         modeli: Object,
     },
@@ -44,9 +54,9 @@ export default {
         }
     },
     computed: {
-    computedHeight() {
-      return `calc(97svh - 48px)`;
+            computedHeight() {
+            return `calc(97svh - 48px)`;
+        }
     }
-  }
 }
 </script>

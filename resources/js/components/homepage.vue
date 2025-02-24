@@ -39,18 +39,27 @@
     <modelH :modeli="models[5]"></modelH>
     <modelH :modeli="models[6]"></modelH>
     <modelH :modeli="models[7]"></modelH>
+    <modelF :modeli="models[8]"></modelF>
+    <abg></abg>
+    <Hfooter></Hfooter>
 </template>
 <script>
 import { nextTick, onMounted, ref } from 'vue';
 import enavbar from './navbar.vue';
 import personalmsg from './personalmsg.vue';
 import modelH from './hopageModel.vue';
+import modelF from './Finisher.vue';
+import abg from './agb.vue';
+import Hfooter from './Hfooter.vue';
 
 export default {
     components: {
         enavbar,
         personalmsg,
-        modelH
+        modelH,
+        modelF,
+        abg,
+        Hfooter
     },
     setup() {
         const bannerRef = ref(null);
@@ -87,6 +96,7 @@ export default {
             models: [
                 {
                     model: "Das neue Model Y",
+                    mediaType: "image",
                     img: [
                         { source: "model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.jpeg", media: "(min-width: 900px) and (orientation: landscape)" },
                         { source: "model-Y-2/Homepage-Model-Y-2-Mobile-EMEA-LHD.avif", media: "(max-height: 599px) and (orientation: landscape)" },
@@ -100,6 +110,7 @@ export default {
                 },
                 {
                     model: "Model Y",
+                    mediaType: "image",
                     img: [
                         { source: "model-Y/Homepage-Model-Y-Global-Desktop.jpeg", media: "(min-width: 600px)" },
                         { source: "model-Y/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif", media: "(max-width: 599px)" },
@@ -112,6 +123,7 @@ export default {
                 },
                 {
                     model: "Model 3",
+                    mediaType: "image",
                     img: [
                         { source: "model-3/Homepage-Model-3-Desktop-US.jpeg", media: "(min-width: 900px) and (orientation: landscape)" },
                         { source: "model-3/Homepage-Model-3-Mobile-US.avif", media: "(max-height: 599px) and (orientation: landscape)" },
@@ -124,6 +136,7 @@ export default {
                 },
                 {
                     model: "Model S",
+                    mediaType: "image",
                     img: [
                         { source: "model-S/Homepage-Model-S-Desktop-US.avif", media: "(min-width: 900px) and (orientation: landscape)" },
                         { source: "model-S/Homepage-Model-S-Mobile-US.avif", media: "(max-height: 599px) and (orientation: landscape)" },
@@ -136,6 +149,7 @@ export default {
                 },
                 {
                     model: "Model X",
+                    mediaType: "image",
                     img: [
                         { source: "model-X/Homepage-Model-X-Desktop-US.avif", media: "(min-width: 900px) and (orientation: landscape)" },
                         { source: "model-X/Homepage-Model-X-Mobile-US.avif", media: "(max-height: 599px) and (orientation: landscape)" },
@@ -147,19 +161,21 @@ export default {
                     buttonB: "Probefahrt"
                 },
                 {
-                    model: "Tesla erleben",
+                    model: "Edison erleben",
+                    mediaType: "video",
                     img: [
-                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(min-width: 900px) and (orientation: landscape)" },
-                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(max-height: 599px) and (orientation: landscape)" },
-                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(max-width: 599px) and (orientation: portrait)" },
-                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(min-width: 900px) and (orientation: portrait)" }
-                    ],
+                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(min-width: 900px) and (orientation: landscape)", type: "video/webm" },
+                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(max-height: 599px) and (orientation: landscape)", type: "video/webm" },
+                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(max-width: 599px) and (orientation: portrait)", type: "video/webm" },
+                        { source: "TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm", media: "(min-width: 900px) and (orientation: portrait)", type: "video/webm" }
+                   ],
                     message:"",
                     buttonA: null,
                     buttonB: "Probefahrt"
                 },
                 {
                     model: "Powerwall",
+                    mediaType: "image",
                     img: [
                         { source: "powerwall/Homepage-Powerwall-3-Desktop-ROW.avif", media: "(min-width: 900px) and (orientation: landscape)" },
                         { source: "powerwall/Homepage-Powerwall-3-Mobile-ROW.avif", media: "(max-height: 599px) and (orientation: landscape)" },
@@ -172,6 +188,7 @@ export default {
                 },
                 {
                     model: "Zubehör",
+                    mediaType: "image",
                     img: [
                         { source: "additional/Homepage-Accessories-Desktop-EMEA-v2.jpg", media: "(min-width: 900px) and (orientation: landscape)" },
                         { source: "additional/Homepage-Accessories-Mobile-EMEA-v2.jpg", media: "(max-height: 599px) and (orientation: landscape)" },
@@ -181,6 +198,19 @@ export default {
                     message:"",
                     buttonA: null,
                     buttonB: "Jetzt einkaufen"
+                },
+                {
+                    Finishing: "Wir sind Edison",
+                    img: [
+                        { source: "TeslaErleben/Homepage-We-Are-Tesla-Desktop.webm", media: "(min-width: 900px) and (orientation: landscape)", type: "video/webm" },
+                        { source: "TeslaErleben/Homepage-We-Are-Tesla-Desktop.webm", media: "(max-height: 599px) and (orientation: landscape)", type: "video/webm" },
+                        { source: "TeslaErleben/Homepage-We-Are-Tesla-Desktop.webm", media: "(max-width: 599px) and (orientation: portrait)", type: "video/webm" },
+                        { source: "TeslaErleben/Homepage-We-Are-Tesla-Desktop.webm", media: "(min-width: 900px) and (orientation: portrait)", type: "video/webm" }
+                    ],
+                    message:"",
+                    buttonA: "Kommen sie zu Edison",
+                    buttonB: null
+
                 }
                 // Weitere Modelle...
             ],
