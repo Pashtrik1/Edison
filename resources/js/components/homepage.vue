@@ -1,31 +1,34 @@
 <template>
-    <div class="block block-layout-builder">
-        <!-- Navbar -->
-        <personalmsg ref="bannerRef"></personalmsg>
-        <enavbar :style="{ marginTop: bannerHeight + 'px' }"></enavbar>
-        <!-- Bild-Sektion -->
-        <section class="relative z-0">
-            <div class="w-[100%]">
-                <picture>
-                    <source v-for="(image, index) in models[0].img" :key="index" :srcset="assingi(models[0].img[index].source)" :media="models[0].img[index].media">
-                    <img src="../../../public/storage/mainpagecontent/model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.jpeg" alt="Model Y">
-                </picture>
-            </div>
-        </section>
+    <personalmsg ref="bannerRef"></personalmsg>
+    <div  class="relative z-0 overflow-hidden" :style="{ paddingTop: bannerHeight + 'px' }">
+
+        <enavbar></enavbar>
+            <section class="relative z-0">
+                <div class="w-[100%] h-screen overflow-hidden">
+                    <picture>
+                        <source v-for="(image, index) in models[0].img" :key="index" :srcset="assingi(models[0].img[index].source)" :media="models[0].img[index].media">
+                        <img :src=assingi(models[0].img[0].source) alt="Model 3" class="w-full h-screen object-cover object-[55%_45%]" :style="{ height: computedHeight }">
+                    </picture>
+                </div>
+            </section>
         <!-- Text über dem Bild -->
-        <div class="w-[100%] h-[100%] absolute bottom-0 inset-0 flex justify-center my-9">
+        <div class="w-[100%] max-h-[855px] overflow-hidden absolute bottom-0 inset-0 flex justify-center my-9">
             <div class="inset-0 justify-center h-screen relative flex mt-[132px]">
-                <div class="text-center tracking-tighter">
-                    <h1 class="text-white text-[69px] font-semibold leading-none pb-1">Das neue Model Y</h1>
-                    <h3 class="text-white font-semibold text-2xl">Auslieferungen beginnen im März</h3>
-                    <div class="flex justify-center mt-4">
-                        <div class="flex gap-4 space-x-3">
-                            <button type="button" class="w-[255px] h-10 text-white bg-blue-600 hover:bg-blue-800 font-semibold rounded text-sm px-6 py-[3px] dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none">
-                                {{ models[0].buttonA }}
-                            </button>
-                            <button type="button" class="w-[255px] h-10 text-black bg-white hover:bg-white-800 font-semibold rounded text-sm px-6 py-[3px] dark:bg-white-600 dark:hover:bg-gray-200 focus:outline-none">
-                                {{ models[0].buttonB }}
-                            </button>
+                <div class="grid grid-row-2 text-center tracking-tighter w-[100%]">
+                    <div class="grid grid-rows-  gap-y-1 h-[80px] sm:h-[100px]">
+                        <!--Start of row-->
+                        <h1 class="text-white sm:text-[69px] text-5xl font-semibold leading-none pb-1">Das neue Model Y</h1>
+                        <h3 class="text-white font-semibold sm:text-2xl text-xl">Auslieferungen beginnen im März</h3>
+                        <div class="flex justify-center items-start">
+                            <!--Button A AND B-->
+                            <div class="flex space-x-3 pb-6 w-[100%] justify-center py-1">
+                                <button class="w-[50%] max-w-[255px] min-w-[100px] h-10 text-white bg-blue-600 hover:bg-blue-800 font-semibold rounded text-sm px-6 focus:outline-none transition-all duration-200 ease-in-out">
+                                    {{ models[0].buttonA }}
+                                </button>
+                                <button class="w-[50%] max-w-[255px] min-w-[100px] h-10 text-black bg-white hover:bg-gray-200 font-semibold rounded text-sm px-6  focus:outline-none transition-all duration-200 ease-in-out">
+                                    {{ models[0].buttonB }}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,7 +85,9 @@ export default {
             window.addEventListener('resize', () => {
                 nextTick(updateBannerHeight);
             });
+            window.addEventListener("resize", this.updateHeight);
         });
+        
 
         return {
             bannerRef,
@@ -92,6 +97,7 @@ export default {
 
     data() {
         return {
+            windowHeight: window.innerHeight,
             mtnav: 55, 
             models: [
                 {
@@ -102,7 +108,7 @@ export default {
                         { source: "model-Y-2/Homepage-Model-Y-2-Mobile-EMEA-LHD.avif", media: "(max-height: 599px) and (orientation: landscape)" },
                         { source: "model-Y-2/Homepage-Model-Y-2-Mobile-EMEA-LHD.avif", media: "(max-width: 599px) and (orientation: portrait)" },
                         { source: "model-Y-2/Homepage-Model-Y-2-Tablet-EMEA-LHD.avif", media: "(min-width: 600px) and (orientation: portrait)" },
-                        { source: "model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.avif", media: "(min-width: 900px) and (orientation: portrait)" }
+                        { source: "model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.avif", media: "(min-width: 900px) and (orientation: landscape)" }
                     ],
                     message: "Seien Sie unter den Ersten, die erfahren, wann unser aktualisiertes Model 3 für Probefahrten verfügbar ist.",
                     buttonA: "Bestellen",
