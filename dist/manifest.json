@@ -1,0 +1,38 @@
+{
+  "public/storage/mainpagecontent/icons/Glob.png": {
+    "file": "assets/Glob-Cfzjr4zx.png",
+    "src": "public/storage/mainpagecontent/icons/Glob.png"
+  },
+  "public/storage/mainpagecontent/icons/TESLA.png": {
+    "file": "assets/TESLA-cN0eHF1w.png",
+    "src": "public/storage/mainpagecontent/icons/TESLA.png"
+  },
+  "public/storage/mainpagecontent/icons/User.png": {
+    "file": "assets/User-eNvMtfLJ.png",
+    "src": "public/storage/mainpagecontent/icons/User.png"
+  },
+  "public/storage/mainpagecontent/icons/mark.png": {
+    "file": "assets/mark-DGU-NM3w.png",
+    "src": "public/storage/mainpagecontent/icons/mark.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-W6wsEOkj.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Dinq8UoR.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-W6wsEOkj.css"
+    ],
+    "assets": [
+      "assets/TESLA-cN0eHF1w.png",
+      "assets/mark-DGU-NM3w.png",
+      "assets/Glob-Cfzjr4zx.png",
+      "assets/User-eNvMtfLJ.png"
+    ]
+  }
+}

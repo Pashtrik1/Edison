@@ -55,6 +55,34 @@ import modelF from './Finisher.vue';
 import abg from './agb.vue';
 import Hfooter from './Hfooter.vue';
 
+
+//images
+import modelY2 from '@/assets/mainpagecontent/model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.jpeg';
+import modelY2Mobile from '@/assets/mainpagecontent/model-Y-2/Homepage-Model-Y-2-Mobile-EMEA-LHD.avif';
+import modelY2Mobile2 from '@/assets/mainpagecontent/model-Y-2/Homepage-Model-Y-2-Mobile-EMEA-LHD.avif';
+import modelY2Tablet from '@/assets/mainpagecontent/model-Y-2/Homepage-Model-Y-2-Tablet-EMEA-LHD.avif';
+import modelY2Desktop from '@/assets/mainpagecontent/model-Y-2/Homepage-Model-Y-2-Desktop-EMEA-LHD.avif';
+
+import modelY from '@/assets/mainpagecontent/model-Y/Homepage-Model-Y-Global-Desktop.jpeg';
+import modelYMobile from '@/assets/mainpagecontent/model-Y/Homepage-Model-Y-Mobile-EMEA-LHD-v3.avif';
+
+import model3 from '@/assets/mainpagecontent/model-3/Homepage-Model-3-Desktop-US.jpeg';
+import model3Mobile from '@/assets/mainpagecontent/model-3/Homepage-Model-3-Mobile-US.avif';
+
+import modelS from '@/assets/mainpagecontent/model-S/Homepage-Model-S-Desktop-US.avif';
+import modelSMobile from '@/assets/mainpagecontent/model-S/Homepage-Model-S-Mobile-US.avif';
+
+import modelX from '@/assets/mainpagecontent/model-X/Homepage-Model-X-Desktop-US.avif';
+import modelXMobile from '@/assets/mainpagecontent/model-X/Homepage-Model-X-Mobile-US.avif';
+
+import edison from '@/assets/mainpagecontent/TeslaErleben/Homepage-Demo-Drive-Desktop-NA.webm';
+import powerwall from '@/assets/mainpagecontent/powerwall/Homepage-Powerwall-3-Desktop-ROW.avif';
+import accessories from '@/assets/mainpagecontent/additional/Homepage-Accessories-Desktop-EMEA-v2.jpg';
+import accessoriesMobile from '@/assets/mainpagecontent/additional/Homepage-Accessories-Mobile-EMEA-v2.jpg';
+
+import weAreTesla from '@/assets/mainpagecontent/TeslaErleben/Homepage-We-Are-Tesla-Desktop.webm';
+
+
 export default {
     components: {
         enavbar,

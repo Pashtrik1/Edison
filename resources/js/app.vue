@@ -1,12 +1,14 @@
 <template>
-  <personalMsg></personalMsg>
+  <homepage></homepage>
 </template>
 
 <script>
-import personalMsg from './components/personalmsg.vue';
+import Homepage from './components/homepage.vue';
+import hompage from './components/homepage.vue';
+
 export default {
   components:{
-    personalMsg
+    hompage
   },
   props: ['visible'],
   data() {
